@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package a2f;
+
+service AudioToFace {
+  rpc SubmitAudio (SubmitAudioRequest) returns (SubmitAudioResponse);
+}
+
+message SubmitAudioRequest {
+  bytes audio_data = 1;     // 音频内容（二进制）
+  int32 sample_rate = 2;    // 采样率（如 16000）
+  bool stream_mode = 3;     // 是否流式发送（false = 一次发完）
+}
+
+message SubmitAudioResponse {
+  string status = 1;        // 返回状态，成功为 "OK"
+}
