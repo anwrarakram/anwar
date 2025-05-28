@@ -1,6 +1,6 @@
 import requests
 def get_baidu_answer(text: str) -> str:
-    DEEPSEEK_API_KEY = 'sk-f84bc88200bd421f933d9bf1d3da4627'
+    DEEPSEEK_API_KEY = 'api-key'
     DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions'
     headers = {
         "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
